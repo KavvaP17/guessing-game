@@ -1,7 +1,6 @@
 class GuessingGame {
     constructor() 
     {
-        this.res=-1;
         this._max=0;
         this._min=0;
     }
@@ -19,13 +18,13 @@ class GuessingGame {
 
     lower() 
     {
-        var delta=(this._max-this._min)/2;
+        var delta=Math.round((this._max-this._min)/2);
         this._max-=delta;
     }
 
     greater() 
     {
-        var delta=(this._max-this._min)/2;
+        var delta=Math.round((this._max-this._min)/2);
         this._min+=delta;
 
     }
