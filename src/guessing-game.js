@@ -18,14 +18,12 @@ class GuessingGame {
 
     lower() 
     {
-        var delta=Math.round((this._max-this._min)/2);
-        this._max-=delta;
+        this._min=Math.round(this._min+this._max)/2;
     }
 
     greater() 
     {
-        var delta=Math.round((this._max-this._min)/2);
-        this._min+=delta;
+        this._max=Math.round(this._min+this._max)/2;
 
     }
 }
